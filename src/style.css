@@ -14,7 +14,6 @@ html {
     width: 397px;
     height: 194px;
     display: grid;
-
     padding: 25px;
     grid-template-rows: 60px 40px 75px 25px;
     grid-template-columns: 1fr 70px;
@@ -66,4 +65,25 @@ html {
 .card-front .card-expire {
     font-size: 0.85rem;
     grid-area: card-expire;
+}
+
+.card-back {
+    font-size: 0.8rem;
+    display: grid;
+    padding: 40px;
+    width: 367px;
+    height: 165px;
+    grid-template-columns: 1fr 70px;
+    grid-template-rows: 62px 36px 1fr;
+    grid-template-areas:
+        ". ."
+        ". cvc"
+        ". . ";
+    justify-items: center;
+    align-items: center;
+    background-image: url(../images/bg-card-back.png);
+}
+
+.card-back .cvc {
+    grid-area: cvc;
 }
