@@ -1,8 +1,69 @@
 html {
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.125rem;
 }
 
-.bg {
+#bg {
+    position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
+}
+
+.card-front {
+    width: 397px;
+    height: 194px;
+    display: grid;
+
+    padding: 25px;
+    grid-template-rows: 60px 40px 75px 25px;
+    grid-template-columns: 1fr 70px;
+    grid-template-areas:
+        "card-type ."
+        ". ."
+        "card-numbers card-numbers"
+        "card-name card-expire";
+    background-image: url(../images/bg-card-front.png);
+    justify-content: start;
+    align-items: center;
+    color: white;
+}
+
+.card-front .card-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: card-type;
+    height: 40px;
+    width: 80px;
+}
+
+.card-front .card-logo div:first-child {
+    height: 45px;
+    width: 45px;
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.card-front .card-logo div:last-child {
+    height: 15px;
+    width: 15px;
+    border: 0.5px aliceblue solid;
+    border-radius: 50%;
+}
+
+.card-front .card-number {
+    grid-area: card-numbers;
+    letter-spacing: 0.10em;
+    font-size: 1.50rem;
+}
+
+.card-front .card-name {
+    font-size: 0.85rem;
+    grid-area: card-name;
+}
+
+.card-front .card-expire {
+    font-size: 0.85rem;
+    grid-area: card-expire;
 }
