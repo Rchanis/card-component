@@ -26,6 +26,7 @@ html {
     justify-content: start;
     align-items: center;
     color: white;
+    letter-spacing: 0.1em;
 }
 
 .card-front .card-logo {
@@ -53,7 +54,6 @@ html {
 
 .card-front .card-number {
     grid-area: card-numbers;
-    letter-spacing: 0.10em;
     font-size: 1.50rem;
 }
 
@@ -82,8 +82,10 @@ html {
     justify-items: center;
     align-items: center;
     background-image: url(../images/bg-card-back.png);
+    color: white;
 }
 
 .card-back .cvc {
+    letter-spacing: 0.1em;
     grid-area: cvc;
 }
