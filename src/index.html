@@ -49,23 +49,28 @@
     </div>
   </div>
 
-  <form>
-    <label for="cardholder">Cardholder Name</label><br>
-    <input type="text" id="cardholder" name="cardholder" value="e.g. Jane Appleseed">
-    <br>
+  <form id="form">
+    <div class="input-field">
+      <label for="cardholder">CARDHOLDER NAME</label><br>
+      <input type="text" id="cardholder" name="cardholder" placeholder="e.g. Jane Appleseed">
+    </div>
 
-    <laber for="card-number">Card Number</laber><br>
-    <input type="number" id="card-number" name="card-number" value="e.g. 1234 5678 9123 0000">
-    <br>
+    <div class="input-field">
+      <label for="card-number">CARD NUMBER</label><br>
+      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+    </div>
 
-    <label for="card-date">Exp. Date (MM/YY)</label>
-    <label for="cvc">CVC</label><br>
-    <input type="number" id="card-date month" name="card-date" value="MM">
-    <input type="number" id="year" name="card-date" value="YY">
-    <input type="number" id="cvc" name="cvc" value="e.g. 123">
-    <br>
+    <div class="input-field">
+      <label for="card-date">EXP. DATE (MM/YY)</label>
+      <label for="cvc">CVC</label><br>
+      <input type="text" id="card-date month" name="card-date" placeholder="MM">
+      <input type="text" id="year" name="card-date" placeholder="YY">
+      <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+    </div>
 
-    <input type="submit" id="confirm" name="confirm" value="confirm">
+    <a class="confirm">
+      Confirm
+    </a>
   </form>
   <!-- Completed state start -->
   <div id="thank-you">

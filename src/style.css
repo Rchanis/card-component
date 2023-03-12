@@ -8,6 +8,7 @@ html {
     left: 0;
     top: 0;
     z-index: -1;
+    display: none;
 }
 
 .card-front {
@@ -88,4 +89,37 @@ html {
 .card-back .cvc {
     letter-spacing: 0.1em;
     grid-area: cvc;
+}
+
+#form {
+    height: 490px;
+    width: 370px;
+    display: flex;
+    flex-direction: column
+}
+
+#form .input-field {
+    padding: 10px
+}
+
+#form .input-field label {
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+}
+
+#form .input-field input {
+    width: 100%;
+    height: 18px;
+    padding: 9px;
+    border-radius: 5px;
+}
+
+#form .confirm {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 9px;
 }
