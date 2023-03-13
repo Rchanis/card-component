@@ -1,6 +1,8 @@
 html {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.125rem;
+    height: 100vh;
+    width: 100vw;
 }
 
 #bg {
@@ -8,7 +10,10 @@ html {
     left: 0;
     top: 0;
     z-index: -1;
-    display: none;
+    width: 33vw;
+    height: 100vh;
+    background-image: url("../images/bg-main-desktop.png");
+    background-size: cover;
 }
 
 .card-front {
@@ -28,6 +33,11 @@ html {
     align-items: center;
     color: white;
     letter-spacing: 0.1em;
+    grid-area: card-front;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-bottom: 20px;
+    margin-right: 60px;
 }
 
 .card-front .card-logo {
@@ -84,6 +94,11 @@ html {
     align-items: center;
     background-image: url(../images/bg-card-back.png);
     color: white;
+    grid-area: card-back;
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin-top: 20px;
+
 }
 
 .card-back .cvc {
@@ -92,10 +107,13 @@ html {
 }
 
 #form {
-    height: 490px;
+    height: 400px;
     width: 400px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    grid-area: form;
+    align-self: center;
+    justify-self: center;
 }
 
 #form .input-field {
@@ -115,7 +133,12 @@ html {
     padding: 14px;
     padding-top: 16px;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px;
+    border-color: hsl(270, 3%, 87%);
+}
+
+#form .input-field input:active {
+    border-color: hsl(279, 6%, 55%);
 }
 
 #form .input-field:last-of-type {
@@ -156,10 +179,21 @@ html {
     text-decoration: none;
     justify-content: center;
     align-content: center;
-    height: 40px;
-    width: 100%;
+    height: 50px;
+    width: 411px;
     border-radius: 5px;
-    padding: 9px;
+    margin-left: 9px;
     background-color: hsl(278, 68%, 11%);
     color: white
+}
+
+#page-grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "card-front form"
+        "card-back form";
 }
