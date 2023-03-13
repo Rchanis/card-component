@@ -57,18 +57,19 @@
 
     <div class="input-field">
       <label for="card-number">CARD NUMBER</label><br>
-      <input type="text" id="card-number" name="card-number" placeholder="e.g. 1234 5678 9123 0000">
+      <input id="card-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
+        maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
     </div>
 
     <div class="input-field">
-      <label for="card-date">EXP. DATE (MM/YY)</label>
+      <label for="card-date" id="exp-date-label">EXP. DATE (MM/YY)</label>
       <label for="cvc">CVC</label><br>
-      <input type="text" id="card-date month" name="card-date" placeholder="MM">
+      <input type="text" id="month" name="card-date" placeholder="MM">
       <input type="text" id="year" name="card-date" placeholder="YY">
       <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
     </div>
 
-    <a class="confirm">
+    <a class="confirm" href="#">
       Confirm
     </a>
   </form>

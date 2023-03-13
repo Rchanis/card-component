@@ -93,7 +93,7 @@ html {
 
 #form {
     height: 490px;
-    width: 370px;
+    width: 400px;
     display: flex;
     flex-direction: column
 }
@@ -104,22 +104,62 @@ html {
 
 #form .input-field label {
     letter-spacing: 0.1em;
-    font-size: 0.7rem;
+    font-size: 0.82rem;
+    color: hsl(278, 68%, 11%);
 }
 
 #form .input-field input {
+    font-size: 1.125rem;
     width: 100%;
     height: 18px;
-    padding: 9px;
+    padding: 14px;
+    padding-top: 16px;
     border-radius: 5px;
+    margin-top: 5px;
+}
+
+#form .input-field:last-of-type {
+    display: grid;
+    width: 411px;
+    grid-template-columns: 1fr 1fr 200px;
+    grid-template-areas:
+        "exp-date-label exp-date-label cvc-label"
+        "exp-date-month exp-date-year cvc";
+}
+
+#form .input-field:last-of-type #exp-date-label {
+    grid-area: exp-date-label;
+}
+
+#form .input-field #month,
+#form .input-field #year {
+    width: 60%;
+    margin-right: 5px;
+}
+
+#form .input-field #month {
+    grid-area: exp-date-month;
+}
+
+#form .input-field #year {
+    grid-area: exp-date-year;
+}
+
+#form .input-field #cvc {
+    grid-area: cvc;
+    width: auto;
+    margin-left: 5px;
 }
 
 #form .confirm {
     display: grid;
+    text-decoration: none;
     justify-content: center;
     align-content: center;
     height: 40px;
     width: 100%;
     border-radius: 5px;
     padding: 9px;
+    background-color: hsl(278, 68%, 11%);
+    color: white
 }
