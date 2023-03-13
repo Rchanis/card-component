@@ -51,39 +51,52 @@
     </div>
 
     <form id="form">
-      <div class="input-field">
-        <label for="cardholder">CARDHOLDER NAME</label><br>
-        <input type="text" id="cardholder" name="cardholder" placeholder="e.g. Jane Appleseed">
-      </div>
+      <div id="form-inputs">
+        <div class="input-field">
+          <label for="cardholder">CARDHOLDER NAME</label><br>
+          <input type="text" id="cardholder" name="cardholder" placeholder="e.g. Jane Appleseed">
+        </div>
 
-      <div class="input-field">
-        <label for="card-number">CARD NUMBER</label><br>
-        <input id="card-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
-          maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
-      </div>
+        <div class="input-field">
+          <label for="card-number">CARD NUMBER</label><br>
+          <input id="card-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
+            maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+        </div>
 
-      <div class="input-field">
-        <label for="card-date" id="exp-date-label">EXP. DATE (MM/YY)</label>
-        <label for="cvc">CVC</label><br>
-        <input type="text" id="month" name="card-date" placeholder="MM">
-        <input type="text" id="year" name="card-date" placeholder="YY">
-        <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
-      </div>
+        <div class="input-field">
+          <label for="card-date" id="exp-date-label">EXP. DATE (MM/YY)</label>
+          <label for="cvc">CVC</label><br>
+          <input type="text" id="month" name="card-date" placeholder="MM">
+          <input type="text" id="year" name="card-date" placeholder="YY">
+          <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+        </div>
 
+      </div>
+      <div id="thank-you-flex">
+
+        <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="url(#a)" />
+          <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+          <defs>
+            <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6348FE" />
+              <stop offset="1" stop-color="#610595" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <!-- Completed state start -->
+        <div id="thank-you">
+          THANK YOU!
+        </div>
+        <div id="thank-you-message">
+          We've added your card details
+        </div>
+      </div>
       <a class="confirm" href="#">
         Confirm
       </a>
     </form>
   </div>
-  <!-- Completed state start -->
-  <div id="thank-you">
-    THANK YOU!
-  </div>
-  <div id="botton-thank-you">
-    We've added your card details
-  </div>
-  <input type="submit" id="confirm" name="confirm" value="confirm">
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/Rchanis">Raúl Fernandez</a>.

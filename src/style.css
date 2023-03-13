@@ -106,6 +106,10 @@ html {
     grid-area: cvc;
 }
 
+#form-inputs {
+    display: none;
+}
+
 #form {
     height: 400px;
     width: 400px;
@@ -114,6 +118,7 @@ html {
     grid-area: form;
     align-self: center;
     justify-self: center;
+    justify-content: center;
 }
 
 #form .input-field {
@@ -196,4 +201,22 @@ html {
     grid-template-areas:
         "card-front form"
         "card-back form";
+}
+
+#thank-you-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#thank-you-flex #thank-you {
+    padding-top: 40px;
+    font-size: 1.8rem;
+    color: hsl(278, 68%, 11%);
+}
+
+#thank-you-flex #thank-you-message {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: hsl(279, 6%, 55%);
 }
