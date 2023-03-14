@@ -55,12 +55,16 @@
         <div class="input-field">
           <label for="cardholder">CARDHOLDER NAME</label><br>
           <input type="text" id="cardholder" name="cardholder" placeholder="e.g. Jane Appleseed">
+          <div class="error name format">Wrong format, letter only</div>
+          <div class="error name blank">Can't be blank</div>
         </div>
 
         <div class="input-field">
           <label for="card-number">CARD NUMBER</label><br>
           <input id="card-number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
             maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+          <div class="error number format">Wrong format, numbers only</div>
+          <div class="error number blank">Can't be blank</div>
         </div>
 
         <div class="input-field">
@@ -68,7 +72,11 @@
           <label for="cvc">CVC</label><br>
           <input type="text" id="month" name="card-date" placeholder="MM">
           <input type="text" id="year" name="card-date" placeholder="YY">
+          <div class="error date blank">Can't be blank</div>
+          <div class="error date format">Wrong format, numbers only</div>
           <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+          <div class="error cvc blank">Can't be blank</div>
+          <div class="error cvc format">Wrong format, numbers only</div>
         </div>
 
       </div>
