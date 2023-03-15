@@ -5,6 +5,15 @@ html {
     width: 100vw;
 }
 
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+}
+
 #bg {
     position: absolute;
     left: 0;
@@ -37,7 +46,7 @@ html {
     align-self: flex-end;
     justify-self: flex-end;
     margin-bottom: 20px;
-    margin-right: 60px;
+    margin-right: 100px;
 }
 
 .card-front .card-logo {
