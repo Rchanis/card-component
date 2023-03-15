@@ -63,17 +63,17 @@ html {
     border-radius: 50%;
 }
 
-.card-front .card-number {
+.card-front #card-img-number {
     grid-area: card-numbers;
     font-size: 1.50rem;
 }
 
-.card-front .card-name {
+.card-front #card-img-name {
     font-size: 0.85rem;
     grid-area: card-name;
 }
 
-.card-front .card-expire {
+.card-front #card-img-expire {
     font-size: 0.85rem;
     grid-area: card-expire;
 }
@@ -101,7 +101,12 @@ html {
 
 }
 
-.card-back .cvc {
+.card-front #card-img-year,
+.card-front #card-img-month {
+    display: inline;
+}
+
+.card-back #card-img-cvc {
     letter-spacing: 0.1em;
     grid-area: cvc;
 }
