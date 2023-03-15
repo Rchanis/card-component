@@ -140,7 +140,6 @@ html {
     padding-top: 16px;
     border-radius: 0.5em;
     margin-top: 10px;
-    border-color: hsl(270, 3%, 87%);
 }
 
 #form .input-field input:focus {
@@ -185,21 +184,6 @@ html {
     width: auto;
 }
 
-#form .error {
-    display: none;
-    font-size: 0.7rem;
-    padding-top: 8px;
-    color: hsl(0, 100%, 66%);
-}
-
-#form .error.cvc.blank {
-    display: block;
-    grid-area: error-cvc;
-}
-
-#form .error.date {
-    grid-area: error-date;
-}
 
 #form .confirm {
     display: grid;
@@ -214,6 +198,24 @@ html {
     margin-left: 9px;
     background-color: hsl(278, 68%, 11%);
     color: white
+}
+
+.input-field.error small {
+    visibility: visible;
+}
+
+.input-field.error input {
+    border-color: hsl(0, 100%, 66%);
+    outline: none;
+}
+
+.input-field.success input {
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
+.input-field small {
+    color: hsl(0, 100%, 66%);
+    visibility: hidden;
 }
 
 #page-grid {
