@@ -111,7 +111,7 @@ html {
 }
 
 #form {
-    height: 400px;
+    height: 450px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -151,37 +151,29 @@ html {
 }
 
 
-#form .input-field:last-of-type {
+#form .last-input-row {
     display: grid;
     width: 411px;
-    grid-template-columns: 1fr 1fr 200px;
-    grid-template-areas:
-        "exp-date-label exp-date-label cvc-label"
-        "exp-date-month exp-date-year cvc"
-        "error-date error-date error-cvc";
+    grid-template-columns: 1fr 1fr;
+
 }
 
-#form .input-field:last-of-type #exp-date-label {
-    grid-area: exp-date-label;
-}
 
-#form .input-field #month,
-#form .input-field #year {
-    width: 60%;
+
+#form .input-field #month {
+    width: 29%;
     margin-right: 5px;
 }
 
-#form .input-field #month {
-    grid-area: exp-date-month;
+#form .input-field #year {
+    width: 32%;
 }
 
-#form .input-field #year {
-    grid-area: exp-date-year;
-}
+
 
 #form .input-field #cvc {
     grid-area: cvc;
-    width: auto;
+    width: 94%;
 }
 
 
@@ -233,6 +225,7 @@ html {
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-items: center
 }
 
 #thank-you-flex #thank-you {

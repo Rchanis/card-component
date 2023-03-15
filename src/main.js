@@ -4,6 +4,7 @@ const card_number = document.getElementById("card-number");
 const card_date_month = document.getElementById("month");
 const card_date_year = document.getElementById("year");
 const card_cvc = document.getElementById("cvc");
+let valid = true;
 
 function showError(input, message) {
     const formControl = input.parentElement;
@@ -21,8 +22,10 @@ function checkCardNumber(input) {
     const regex = /^\d{16}$/;
     if (input.value == "") {
         showError(input, "Can't be blank");
+        valid = false;
     } else if (!regex.test(input.value)) {
         showError(input, "Wrong format, numbers only");
+        valid = false;
     } else {
         success(input);
     }
@@ -32,8 +35,10 @@ function checkMonth(input) {
     const regex = /^(0[1-9]|1[0-2])$/;
     if (input.value == "") {
         showError(input, "Can't be blank");
+        valid = false;
     } else if (!regex.test(input.value)) {
         showError(input, "Wrong format, numbers only");
+        valid = false;
     } else {
         success(input);
     }
@@ -44,8 +49,10 @@ function checkYear(input) {
     console.log(input);
     if (input.value == "") {
         showError(input, "Can't be blank");
+        valid = false;
     } else if (!regex.test(input.value)) {
         showError(input, "Wrong format, numbers only");
+        valid = false;
     } else {
         success(input);
     }
@@ -55,8 +62,10 @@ function checkCVC(input) {
     const regex = /^\d{3,4}$/;
     if (input.value == "") {
         showError(input, "Can't be blank");
+        valid = false;
     } else if (!regex.test(input.value)) {
         showError(input, "Wrong format, numbers only");
+        valid = false;
     } else {
         success(input);
     }
@@ -66,8 +75,10 @@ function checkCardholder(input) {
     const regex = /^[a-zA-Z ]{1,50}$/;
     if (input.value == "") {
         showError(input, "Can't be blank");
+        valid = false;
     } else if (!regex.test(input.value)) {
         showError(input, "Wrong format, numbers only");
+        valid = false;
     } else {
         success(input);
     }
@@ -75,9 +86,14 @@ function checkCardholder(input) {
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
+    valid = true;
     checkCardholder(cardholder);
     checkCVC(card_cvc);
     checkYear(card_date_year);
     checkMonth(card_date_month);
     checkCardNumber(card_number);
+    if (valid) {
+        document.getElementById("thank-you-flex").style.display = "grid";
+        document.getElementById("form-inputs").style.display = "none";
+    }
 });
